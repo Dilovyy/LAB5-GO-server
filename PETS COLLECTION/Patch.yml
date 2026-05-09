@@ -1,0 +1,25 @@
+info:
+  name: Patch
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{ServUrl}}/pets/7"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Mopson",
+        "age": 1,
+        "kind": "dog",
+        "breed": "pug"
+        
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,8 @@
+CREATE TABLE pets (
+    id INT NOT NULL AUTO_INCREMENT,
+    name text,
+    age int,
+    kind text NOT NULL,
+    breed text NOT NULL,
+    PRIMARY KEY (id)
+);

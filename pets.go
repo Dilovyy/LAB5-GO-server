@@ -1,18 +1,30 @@
 package main
 
-import "database/sql"
-
 type Pet struct {
-	ID    int            `json:"id"`
-	Name  sql.NullString `json:"name"`
-	Age   sql.NullInt64  `json:"age"`
-	Kind  string         `json:"kind"`
-	Breed string         `json:"breed"`
+	ID    int     `json:"id"`
+	Name  *string `json:"name"`
+	Age   *int    `json:"age"`
+	Kind  string  `json:"kind"`
+	Breed string  `json:"breed"`
 }
 
 type CreateRequest struct {
-	Name  sql.NullString `json:"name"`
-	Age   sql.NullInt64  `json:"age"`
-	Kind  string         `json:"kind"`
-	Breed string         `json:"breed"`
+	Name  *string `json:"name"`
+	Age   *int    `json:"age"`
+	Kind  string  `json:"kind"`
+	Breed string  `json:"breed"`
+}
+
+type UpdateRequest struct {
+	Name  *string `json:"name"`
+	Age   *int    `json:"age"`
+	Kind  string  `json:"kind"`
+	Breed string  `json:"breed"`
+}
+
+type PatchRequest struct {
+	Name  *string `json:"name"`
+	Age   *int    `json:"age"`
+	Kind  *string `json:"kind"`
+	Breed *string `json:"breed"`
 }
